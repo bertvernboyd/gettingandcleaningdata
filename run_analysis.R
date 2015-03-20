@@ -11,17 +11,19 @@ run_analysis <- function(){
   
   
   # 1. Merges the training and the test sets to create one data set. 
-  test_subjects <- read.table("./test/subject_test.txt", col.names=c("subject"))
-  train_subjects <- read.table("./train/subject_train.txt", col.names=c("subject"))
+  test_subjects <- read.table("./test/subject_test.txt", col.names=c("SID"))
+  train_subjects <- read.table("./train/subject_train.txt", col.names=c("SID"))
   subjects <- rbind(test_subjects, train_subjects)
   
-  test_activities <- read.table("./test/y_test.txt", col.names=c("activity"))
-  train_activities <- read.table("./train/y_train.txt", col.names=c("activity"))
+  test_activities <- read.table("./test/y_test.txt", col.names=c("ACT"))
+  train_activities <- read.table("./train/y_train.txt", col.names=c("ACT"))
   activities <- rbind(test_activities, train_activities)
   
   test_feature_values <- read.table("./test/X_test.txt")
   train_feature_values <- read.table("./train/X_train.txt")
   feature_values <- rbind(test_feature_values, train_feature_values)
+  
+  merged_data <- list (subjects, activities, feature_values)
 
   
   # 2. Extracts only the measurements on the mean and standard deviation for each measurement.  
@@ -35,22 +37,19 @@ run_analysis <- function(){
   for (i in 1:length(activities$activity)) {activities$activity[i] <- activity_labels$name[as.integer(activities$activity[i])]}
   
   # 4. Appropriately labels the data set with descriptive variable names.
-  good_features$name[1] <- sub("subject","SUB",good_features$name[1])
-  good_features$name[2] <- sub("activity","ACT",good_features$name[2])
   good_features$name <- gsub("([A-Z])([a-z])+","\\1",good_features$name)
   good_features$name <- sub("(\\-)(m|s)(ean|td)(\\(\\))","\\2",good_features$name)
-  good_features$name <- sub("(\\-)([XYZ])","\\2",good_features$name)
+  good_features$name <- sub("(\\-)([XYZ])","[:lower:]\\2",good_features$name)
   names(good_feature_values) <- good_features$name
-  
-  
+ 
   data <- cbind(subjects, activities, good_feature_values)
-  ordered_data <- data[order(data$subject),]
-  
+  ordered_data <- data[order(data$SID),]
+
   # 5. From the data set in step 4, creates a second, independent tidy data set with the average 
   #    of each variable for each activity and each subject.
   tidy_data <- aggregate(ordered_data[, 3:ncol(ordered_data)],
-                         by=list(activity = ordered_data$activity, 
-                                 subject = ordered_data$subject),
+                         by=list(ACT = ordered_data$ACT, 
+                                 SID = ordered_data$SID),
                          mean)
   tidy_data <- tidy_data[,c(2,1,3:ncol(tidy_data))]
   
