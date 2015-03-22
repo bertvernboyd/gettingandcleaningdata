@@ -39,7 +39,7 @@ run_analysis <- function(){
   # 4. Appropriately labels the data set with descriptive variable names.
   good_features$name <- gsub("([A-Z])([a-z])+","\\1",good_features$name)
   good_features$name <- sub("(\\-)(m|s)(ean|td)(\\(\\))","\\2",good_features$name)
-  good_features$name <- sub("(\\-)([XYZ])","[:lower:]\\2",good_features$name)
+  good_features$name <- sub("(\\-)([XYZ])",tolower("\\2"),good_features$name)
   names(good_feature_values) <- good_features$name
  
   data <- cbind(subjects, activities, good_feature_values)

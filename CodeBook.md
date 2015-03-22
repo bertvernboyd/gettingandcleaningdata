@@ -1,11 +1,11 @@
 ## Variables
 
 All variables with the exception of **SID** and **ACT** follow these conventions
-* Names match the following regex: ^[tf][A-Z]+[ms][xyz]?$
+* Names match the following regex: ^[tf][A-Z]+[ms][XYZ]?$
   * [tf] represents either a **t**ime domain or a **f**requency domain measurement
   * [A-Z]+ represents the name of the feature vector
   * [ms] represents either the **m**ean or the **s**tandard deviation of the measurement
-  * [xyz]? can represent that the measurement occured along a particular axis
+  * [XYZ]? can represent that the measurement occured along a particular axis
 * Values recorded are in the range (-1,1) and contain a maximum of ten digits after the decimal  
 
 ####SID
@@ -18,152 +18,152 @@ Description | Value
 :---:|:---:
 activity | string in the set ("WALKING", "WALKING_UPSTAIRS", "WALKING_DOWNSTAIRS", "SITTING", "STANDING", "LAYING")
 
-####tBAmx
+####tBAmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | time | mean | x-axis  
 
-####tBAmy
+####tBAmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAcc | time | mean | y-axis  
  
-####tBAmz
+####tBAmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | time | mean | z-axis  
  
-####tBAsx
+####tBAsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | time | standard deviation | x-axis  
 
-####tBAsy
+####tBAsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAcc | time | standard deviation | y-axis  
  
-####tBAsz
+####tBAsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | time | standard deviation | z-axis  
  
-####tGAmx
+####tGAmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 GravityAcc | time | mean | x-axis  
 
-####tGAmy
+####tGAmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 GravityAcc | time | mean | y-axis  
  
-####tGAmz
+####tGAmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 GravityAcc | time | mean | z-axis  
  
-####tGAsx
+####tGAsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 GravityAcc | time | standard deviation | x-axis  
 
-####tGAsy
+####tGAsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 GravityAcc | time | standard deviation | y-axis  
  
-####tGAsz
+####tGAsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 GravityAcc | time | standard deviation | z-axis  
  
-####tBAJmx
+####tBAJmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | mean | x-axis  
 
-####tBAJmy
+####tBAJmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | mean | y-axis  
  
-####tBAJmz
+####tBAJmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | mean | z-axis  
  
-####tBAJsx
+####tBAJsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | standard deviation | x-axis  
 
-####tBAJsy
+####tBAJsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | standard deviation | y-axis  
  
-####tBAJsz
+####tBAJsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | time | standard deviation | z-axis  
 
-####tBGmx
+####tBGmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | time | mean | x-axis  
 
-####tBGmy
+####tBGmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyGyro | time | mean | y-axis  
  
-####tBGmz
+####tBGmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | time | mean | z-axis  
  
-####tBGsx
+####tBGsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | time | standard deviation | x-axis  
 
-####tBGsy
+####tBGsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyGyro | time | standard deviation | y-axis  
  
-####tBGsz
+####tBGsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | time | standard deviation | z-axis  
  
-####tBGJmx
+####tBGJmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyroJerk | time | mean | x-axis  
 
-####tBGJmy
+####tBGJmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyGyroJerk | time | mean | y-axis  
  
-####tBGJmz
+####tBGJmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyroJerk | time | mean | z-axis  
  
-####tBGJsx
+####tBGJsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyroJerk | time | standard deviation | x-axis  
 
-####tBGJsy
+####tBGJsY
 Feature Vector | Domain | Observation | Dimension 
  :-:|:-:|:-:|:-:
  BodyGyroJerk | time | standard deviation | y-axis  
  
-####tBGJsz
+####tBGJsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyroJerk | time | standard deviation | z-axis  
@@ -218,92 +218,92 @@ Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyroJerkMag | time | standard deviation | scalar
 
-####fBAmx
+####fBAmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | mean | x-axis  
 
-####fBAmy
+####fBAmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | mean | y-axis  
  
-####fBAmz
+####fBAmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | mean | z-axis  
  
-####fBAsx
+####fBAsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | standard deviation | x-axis  
 
-####fBAsy
+####fBAsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | standard deviation | y-axis  
  
-####fBAsz
+####fBAsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAcc | frequency | standard deviation | z-axis  
 
-####fBAJmx
+####fBAJmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | mean | x-axis  
 
-####fBAJmy
+####fBAJmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | mean | y-axis  
  
-####fBAJmz
+####fBAJmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | mean | z-axis  
  
-####fBAJsx
+####fBAJsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | standard deviation | x-axis  
 
-####fBAJsy
+####fBAJsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | standard deviation | y-axis  
  
-####fBAJsz
+####fBAJsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyAccJerk | frequency | standard deviation | z-axis  
 
-####fBGmx
+####fBGmX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | mean | x-axis  
 
-####fBGmy
+####fBGmY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | mean | y-axis  
  
-####fBGmz
+####fBGmZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | mean | z-axis  
  
-####fBGsx
+####fBGsX
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | standard deviation | x-axis  
 
-####fBGsy
+####fBGsY
 Feature Vector | Domain | Observation | Dimension 
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | standard deviation | y-axis  
  
-####fBGsz
+####fBGsZ
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
 BodyGyro | frequency | standard deviation | z-axis  
@@ -346,7 +346,4 @@ BodyBodyGyroJerkMag | frequency | mean | scalar
 ####fBBGJMs
 Feature Vector | Domain | Observation | Dimension
 :-:|:-:|:-:|:-:
-BodyBodyGyroJerkMag | frequency | standard deviation | scalar
-
-
-
+BodyBodyGyroJerkMag | frequency | standard deviation | scalar  
